@@ -173,10 +173,10 @@
         <!-- SOCIAL LINKS -->
         <div class="social-links">
           <!-- SOCIAL LINK -->
-          <a class="social-link facebook" href="#">
+          <a class="social-link facebook" href="/auth/google">
             <!-- ICON FACEBOOK -->
             <svg class="icon-facebook">
-              <use xlink:href="#svg-facebook"></use>
+              <use xlink:href="#svg-google"></use>
             </svg>
             <!-- /ICON FACEBOOK -->
           </a>

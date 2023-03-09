@@ -27,6 +27,9 @@ use App\Http\Controllers\Admin\AdminRespondController;
 use App\Http\Controllers\Admin\AdminMarkAsReadController;
 
 
+use App\Http\Controllers\Auth\SocialiteController;
+
+
 
 
 /*
@@ -53,6 +56,12 @@ Route::middleware(['guest:web'])->group(function(){
     Route::get('belanja', [ShopController::class, 'index'])->name('belanja.general');
     Route::get('belanja/category={slug}', [ShopController::class, 'shop_category'])->name('belanja.category');
     Route::get('belanja/product={slug}', [ShopController::class, 'shop_detail_product'])->name('belanja.product.detail');
+
+    /**
+     * socialite auth
+     */
+    Route::get('/auth/{provider}', [SocialiteController::class, 'redirectToProvider']);
+    Route::get('/auth/{provider}/callback', [SocialiteController::class, 'handleProvideCallback']);
 
 });
 
